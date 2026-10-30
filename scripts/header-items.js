@@ -492,31 +492,45 @@ const headerItems = {
   regulations: {
     title: "قوانین و مقررات",
     categories: {
-      regulationsItems: {
-        title: "قوانین و مقررات",
-        items: [
-          {
-            id: "regulations-terms",
-            title: "شرایط استفاده از سایت",
-            excerpt: "این بخش برای درج شرایط استفاده از خدمات و محتوای سایت در نظر گرفته شده است.",
-            image: "../images/ravin.png",
-            content: { blocks: [{ type: "heading", level: 1, text: "شرایط استفاده از سایت" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن قوانین سایت تکمیل می‌شود." }], video: null, downloads: [] },
-          },
-          {
-            id: "regulations-privacy",
-            title: "حریم خصوصی کاربران",
-            excerpt: "اطلاعات مربوط به حریم خصوصی و نحوهٔ نگهداری داده‌های کاربران در این بخش قرار می‌گیرد.",
-            image: "../images/ravin.png",
-            content: { blocks: [{ type: "heading", level: 1, text: "حریم خصوصی کاربران" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن سیاست حریم خصوصی تکمیل می‌شود." }], video: null, downloads: [] },
-          },
-          {
-            id: "regulations-purchases",
-            title: "قوانین خرید و دریافت فایل‌ها",
-            excerpt: "شرایط خرید، دریافت و استفاده از محصولات آموزشی در این بخش توضیح داده می‌شود.",
-            image: "../images/ravin.png",
-            content: { blocks: [{ type: "heading", level: 1, text: "قوانین خرید و دریافت فایل‌ها" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن شرایط فروش تکمیل می‌شود." }], video: null, downloads: [] },
-          },
-        ],
+      siteTerms: {
+        title: "شرایط استفاده از سایت",
+        items: [{
+          id: "regulations-terms",
+          title: "شرایط استفاده از سایت",
+          excerpt: "این بخش برای درج شرایط استفاده از خدمات و محتوای سایت در نظر گرفته شده است.",
+          image: "../images/ravin.png",
+          content: { blocks: [{ type: "heading", level: 1, text: "شرایط استفاده از سایت" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن قوانین سایت تکمیل می‌شود." }], video: null, downloads: [] },
+        }],
+      },
+      privacyRules: {
+        title: "حریم خصوصی کاربران",
+        items: [{
+          id: "regulations-privacy",
+          title: "حریم خصوصی کاربران",
+          excerpt: "اطلاعات مربوط به حریم خصوصی و نحوهٔ نگهداری داده‌های کاربران در این بخش قرار می‌گیرد.",
+          image: "../images/ravin.png",
+          content: { blocks: [{ type: "heading", level: 1, text: "حریم خصوصی کاربران" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن سیاست حریم خصوصی تکمیل می‌شود." }], video: null, downloads: [] },
+        }],
+      },
+      purchaseRules: {
+        title: "قوانین خرید و دریافت فایل‌ها",
+        items: [{
+          id: "regulations-purchases",
+          title: "قوانین خرید و دریافت فایل‌ها",
+          excerpt: "شرایط خرید، دریافت و استفاده از محصولات آموزشی در این بخش توضیح داده می‌شود.",
+          image: "../images/ravin.png",
+          content: { blocks: [{ type: "heading", level: 1, text: "قوانین خرید و دریافت فایل‌ها" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن شرایط فروش تکمیل می‌شود." }], video: null, downloads: [] },
+        }],
+      },
+      copyrightRules: {
+        title: "حقوق مالکیت محتوا",
+        items: [{
+          id: "regulations-copyright",
+          title: "حقوق مالکیت محتوا",
+          excerpt: "این بخش برای توضیح حقوق نشر و استفاده از محتوای آموزشی سایت در نظر گرفته شده است.",
+          image: "../images/ravin.png",
+          content: { blocks: [{ type: "heading", level: 1, text: "حقوق مالکیت محتوا" }, { type: "paragraph", text: "متن کامل این بخش در ادامهٔ تکمیل مقررات سایت اضافه می‌شود." }], video: null, downloads: [] },
+        }],
       },
     },
   },
