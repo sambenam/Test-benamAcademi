@@ -68,20 +68,27 @@
   const popularContainer = document.querySelector(".popular-courses_items");
   if (popularContainer) {
     const itemsToShow = getItemsToDisplay("popularCourses", 4);
+    const courseTags = ["مالی و سرمایه‌گذاری", "حسابداری", "تحلیل داده", "برنامه‌نویسی"];
+    const courseDurations = ["۱۰ ساعت", "۱۲ فصل", "۱۰ ساعت", "۸ ساعت"];
+    const courseLevels = ["متوسط", "مقدماتی", "متوسط", "مقدماتی"];
     if (itemsToShow.length > 0) {
       popularContainer.innerHTML = itemsToShow
         .map(
-          (item) => `
+          (item, index) => `
         <li class="popular-courses_item">
           <div class="popular-courses_banner">
             <img src="${item.image || "../images/ravin.png"}" class="popular-courses_img" alt="${item.title}" />
           </div>
-          <span class="popular-courses_badge"> محبوب </span>
+          <span class="popular-courses_badge">${courseTags[index % courseTags.length]}</span>
           <div class="popular-courses_content">
             <h3 class="course-title">${item.title}</h3>
             <p class="course-description">${item.excerpt || "توضیحی برای این آیتم ثبت نشده است."}</p>
+            <div class="course-meta">
+              <span><i class="far fa-clock" aria-hidden="true"></i>${courseDurations[index % courseDurations.length]}</span>
+              <span><i class="fa-solid fa-chart-simple" aria-hidden="true"></i>${courseLevels[index % courseLevels.length]}</span>
+            </div>
             <a href="single-post.html?id=${encodeURIComponent(item.id)}" class="popular-courses_link">
-              مشاهده توضیحات <i class="fas fa-arrow-left"></i>
+              مشاهده دوره <i class="fas fa-chevron-left" aria-hidden="true"></i>
             </a>
           </div>
         </li>

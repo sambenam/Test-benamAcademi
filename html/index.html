@@ -30,211 +30,33 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header">
-    <section class="top-header">
-      <div class="top-header_container">
-        <div class="top-header_wrapper">
-          <div class="top-header_right">
-            <ul class="top-header_right right-menu">
-              <li class="right-menu_items home">
-                <a href="../html/index.html">خانه</a>
-              </li>
-              <li class="right-menu_items about-us">
-                <a href="../html/about-us.html">درباره ما</a>
-              </li>
-
-              <li class="right-menu_items contact-us">
-                <a href="../html/support.html"> تماس با ما </a>
-              </li>
-
-              <li class="right-menu_items rules">
-                <a href="../html/support.html"> قوانین </a>
-              </li>
-
-              <li class="right-menu_items signin">
-                <a href="../html/sign-up.html" class="signup">ورود / عضویت</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="top-header_left">
-            <ul class="components">
-              <li class="social-icons-item instagram">
-                <a class="social-link instagram-social-icon" href="#">
-                  <i class="fa-brands fa-instagram" style="color: rgb(205, 10, 223)"></i>
-                </a>
-              </li>
-
-              <li class="social-icons-item telegram">
-                <a class="social-link telegram-social-icon" href="#">
-                  <i class="fa-brands fa-telegram" style="color: rgb(17, 0, 255)"></i>
-                </a>
-              </li>
-              <li class="social-icons-item bale">
-                <a class="social-link bale-social-icon" href="#" title="پیام‌رسان بله">
-                  <img src="../images/bale.svg" alt="بله" width="16" height="16"
-                    style="display:inline-block;vertical-align:middle">
-                </a>
-              </li>
-
-              <li class="search-box">
-                <input type="text" placeholder="جستجو" />
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </li>
-            </ul>
-          </div>
+  <header class="header home-header">
+    <div class="home-header_row">
+      <a class="desktop-brand" href="../html/index.html" aria-label="بنام آکادمی، صفحهٔ اصلی">
+        <img src="../images/ravin.png" alt="" width="40" height="40" />
+        <span>بنام آکادمی</span>
+      </a>
+      <nav class="home-primary-nav" aria-label="منوی اصلی">
+        <a class="is-active" href="../html/index.html" aria-current="page">خانه</a>
+        <a href="#courses">دوره‌ها</a>
+        <a href="#articles">مقالات</a>
+        <a href="#home-news">اخبار</a>
+        <a href="list-page.html?cat=power_point">فایل‌ها</a>
+        <a href="../html/about-us.html">درباره ما</a>
+      </nav>
+      <div class="home-header_actions">
+        <label class="search-box home-search">
+          <input type="search" aria-label="جستجو در سایت" placeholder="جستجو..." />
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </label>
+        <a class="home-account" href="../html/sign-up.html" aria-label="حساب کاربری" title="حساب کاربری">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+        </a>
+        <div class="right-menu_items signin">
+          <a href="../html/sign-up.html" class="signup">ورود / عضویت</a>
         </div>
       </div>
-    </section>
-
-    <section class="bottom-header">
-      <div class="bottom-header_container">
-        <div class="bottom-header_wrapper">
-          <a class="desktop-brand" href="../html/index.html" aria-label="بنام آکادمی، صفحهٔ اصلی">
-            <img src="../images/ravin.png" alt="" width="40" height="40" />
-            <span>بنام آکادمی</span>
-          </a>
-          <nav class="navbar" aria-label="منوی اصلی">
-            <ul class="nav-menu">
-              <li class="nav-menu_items">
-                <span class="menu-item menu-item-static">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <span class="menu-item_name"> برای دانشجویان </span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-
-                <ul class="sub-menu">
-                  <li class="has-submenu">
-                    <span class="submenu-label">
-                      کتاب و جزوه
-                      <i class="fa-solid fa-chevron-left"></i>
-                    </span>
-
-                    <ul class="sub-menu-2">
-                      <li>
-                        <a href="list-page.html?cat=diploma">دروس تخصصی دیپلم</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=associate_degree">دروس تخصصی کاردانی</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=bachelor">دروس تخصصی کارشناسی</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=master">دروس تخصصی ارشد</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=phd">دروس تخصصی دکتری</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="has-submenu">
-                    <span class="submenu-label">
-                      کنکوری ها
-                      <i class="fa-solid fa-chevron-left"></i>
-                    </span>
-
-                    <ul class="sub-menu-2">
-                      <li>
-                        <a href="list-page.html?cat=konkur1">سوالات کنکوری ها + جواب ها</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=konkur2">ضرایب و منابع کنکور ها</a>
-                      </li>
-                      <li>
-                        <a href="list-page.html?cat=konkur3">روش های مطالعه و تست</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="has-submenu">
-                    <span class="submenu-label">
-                      پروژه های حسابداری
-                      <i class="fa-solid fa-chevron-left"></i>
-                    </span>
-
-                    <ul class="sub-menu-2">
-                      <li>
-                        <a href="list-page.html?cat=Enterpreneurship_projects">پروژه های کارآفرینی</a>
-                      </li>
-
-                      <li>
-                        <a href="list-page.html?cat=Enternship-projects">پروژه های کاراموزی</a>
-                      </li>
-
-                      <li>
-                        <a href="list-page.html?cat=Financial-project">پروژه های مالی و حسابداری</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-menu_items">
-                <span class="menu-item menu-item-static">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <span class="menu-item_name">فایل های حسابداری</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-
-                <ul class="sub-menu">
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=power_point">
-                      دانلود فایل پاور پوینت
-                    </a>
-                  </li>
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=Exel">
-                      دانلود فایل های اکسل</a>
-                  </li>
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=Word"> دانلود فایل های ورد</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-menu_items">
-                <span class="menu-item menu-item-static">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <span class="menu-item_name"> مقالات</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-
-                <ul class="sub-menu">
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=accounting_article">
-                      مقالات حسابداری
-                    </a>
-                  </li>
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=software_training">
-                      آموزش نرم افزار ها</a>
-                  </li>
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=standards">
-                      اصول و استانداردها</a>
-                  </li>
-                  <li class="has-submenu">
-                    <a href="list-page.html?cat=accounting_circulars">
-                      بخش نامه های حسابداری</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-menu_items">
-                <span class="menu-item menu-item-static">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <a href="list-page.html?cat=videos">
-                    <span> فیلم های آموزشی</span>
-                  </a>
-                </span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </section>
+    </div>
   </header>
   <section class="mobile-header">
     <div class="mobile-menu_container">
@@ -462,8 +284,8 @@
               <i class="fa-solid fa-play-circle"></i>
               مشاهده دوره‌ها
             </a>
-            <a href="../html/sign-up.html" class="btn btn-glass btn-lg">
-              عضویت رایگان
+            <a href="../html/about-us.html" class="btn btn-glass btn-lg">
+              درباره ما
             </a>
           </div>
           <div class="hero-stats" aria-label="آمار بنام آکادمی">
@@ -472,15 +294,10 @@
             <div class="stat"><strong class="stat-number">۵۰۰۰+</strong><span class="stat-label">فایل کاربردی</span></div>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-image-wrapper">
-            <img src="../images/home-accounting.svg" alt="" class="hero-image" />
-          </div>
-        </div>
       </section>
 
       <!-- News ticker inspired by the provided homepage concept -->
-      <section class="home-news" data-home-news aria-label="آخرین اخبار سایت">
+      <section class="home-news" id="home-news" data-home-news aria-label="آخرین اخبار سایت">
         <div class="home-news_heading">
           <span class="home-news_icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
           <div><h2>آخرین اخبار سایت</h2><p>از تازه‌ترین دوره‌ها و مطالب باخبر شوید.</p></div>
@@ -504,96 +321,22 @@
               <span class="home-news_thumb" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></span>
               <span class="home-news_copy"><strong>خبرها و آزمون‌های حسابداری</strong><span>اطلاعیه‌ها و فرصت‌های تازه را دنبال کنید</span><time>اخبار سایت</time></span>
             </a>
+            <a class="home-news_item" href="list-page.html?cat=accounting_article">
+              <span class="home-news_thumb" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
+              <span class="home-news_copy"><strong>نکته‌های روز حسابداری</strong><span>دانسته‌های کاربردی برای محیط کار</span><time>مطالب منتخب</time></span>
+            </a>
+            <a class="home-news_item" href="list-page.html?cat=software_training">
+              <span class="home-news_thumb" aria-hidden="true"><i class="fa-solid fa-laptop-file"></i></span>
+              <span class="home-news_copy"><strong>منابع تازهٔ آموزش نرم‌افزار</strong><span>آموزش ابزارهای پرکاربرد مالی</span><time>منابع آموزشی</time></span>
+            </a>
           </div>
         </div>
         <button class="home-news_arrow" type="button" data-news-next aria-label="خبرهای بعدی"><i class="fa-solid fa-chevron-left"></i></button>
         <div class="home-news_dots" aria-label="انتخاب خبر"></div>
       </section>
 
-      <!-- 2. LEARNING PATH -->
-      <section class="learning-path-section">
-        <div class="section-header">
-          <h2 class="section-title">
-            <i class="fa-solid fa-road"></i>
-            مسیر یادگیری <span class="text-gradient">حسابداری</span>
-          </h2>
-        </div>
-        <div class="learning-path">
-          <div class="path-item">
-            <div class="path-step"><i class="fa-solid fa-1"></i></div>
-            <div class="path-content">
-              <h3>مبتدی</h3>
-              <p>آشنایی با مبانی حسابداری</p>
-              <ul class="path-topics">
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> اصول حسابداری
-                </li>
-                <li><i class="fa-solid fa-check-circle"></i> ترازنامه</li>
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> صورت سود و زیان
-                </li>
-                <li><i class="fa-solid fa-check-circle"></i> دفاتر قانونی</li>
-              </ul>
-              <a href="list-page.html?cat=beginner" class="path-link">
-                شروع کنید <i class="fa-solid fa-arrow-left"></i>
-              </a>
-            </div>
-          </div>
-          <div class="path-connector">
-            <i class="fa-solid fa-chevron-left"></i>
-          </div>
-          <div class="path-item active">
-            <div class="path-step"><i class="fa-solid fa-2"></i></div>
-            <div class="path-content">
-              <h3>متوسط</h3>
-              <p>آموزش نرم‌افزارها و تکنیک‌ها</p>
-              <ul class="path-topics">
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> نرم‌افزار سپیدار
-                </li>
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> اکسل حسابداری
-                </li>
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> مالیات بر ارزش
-                  افزوده
-                </li>
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> حقوق و دستمزد
-                </li>
-              </ul>
-              <a href="list-page.html?cat=intermediate" class="path-link">
-                شروع کنید <i class="fa-solid fa-arrow-left"></i>
-              </a>
-            </div>
-          </div>
-          <div class="path-connector">
-            <i class="fa-solid fa-chevron-left"></i>
-          </div>
-          <div class="path-item">
-            <div class="path-step"><i class="fa-solid fa-3"></i></div>
-            <div class="path-content">
-              <h3>پیشرفته</h3>
-              <p>تخصصی و حرفه‌ای</p>
-              <ul class="path-topics">
-                <li><i class="fa-solid fa-check-circle"></i> حسابرسی</li>
-                <li><i class="fa-solid fa-check-circle"></i> تحلیل مالی</li>
-                <li><i class="fa-solid fa-check-circle"></i> بهداشت مالی</li>
-                <li>
-                  <i class="fa-solid fa-check-circle"></i> استانداردهای
-                  بین‌المللی
-                </li>
-              </ul>
-              <a href="list-page.html?cat=advanced" class="path-link">
-                شروع کنید <i class="fa-solid fa-arrow-left"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- 3. POPULAR COURSES -->
-      <section class="poplar-courses courses-section">
+      <section class="poplar-courses courses-section" id="courses">
         <div class="section-header">
           <h2 class="section-title">
             <i class="fas fa-heart"></i>
@@ -694,6 +437,88 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- 2. LEARNING PATH -->
+      <section class="learning-path-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fa-solid fa-road"></i>
+            مسیر یادگیری <span class="text-gradient">حسابداری</span>
+          </h2>
+        </div>
+        <div class="learning-path">
+          <div class="path-item">
+            <div class="path-step"><i class="fa-solid fa-1"></i></div>
+            <div class="path-content">
+              <h3>مبتدی</h3>
+              <p>آشنایی با مبانی حسابداری</p>
+              <ul class="path-topics">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> اصول حسابداری
+                </li>
+                <li><i class="fa-solid fa-check-circle"></i> ترازنامه</li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> صورت سود و زیان
+                </li>
+                <li><i class="fa-solid fa-check-circle"></i> دفاتر قانونی</li>
+              </ul>
+              <a href="list-page.html?cat=beginner" class="path-link">
+                شروع کنید <i class="fa-solid fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+          <div class="path-connector">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="path-item active">
+            <div class="path-step"><i class="fa-solid fa-2"></i></div>
+            <div class="path-content">
+              <h3>متوسط</h3>
+              <p>آموزش نرم‌افزارها و تکنیک‌ها</p>
+              <ul class="path-topics">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> نرم‌افزار سپیدار
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> اکسل حسابداری
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> مالیات بر ارزش
+                  افزوده
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> حقوق و دستمزد
+                </li>
+              </ul>
+              <a href="list-page.html?cat=intermediate" class="path-link">
+                شروع کنید <i class="fa-solid fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+          <div class="path-connector">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="path-item">
+            <div class="path-step"><i class="fa-solid fa-3"></i></div>
+            <div class="path-content">
+              <h3>پیشرفته</h3>
+              <p>تخصصی و حرفه‌ای</p>
+              <ul class="path-topics">
+                <li><i class="fa-solid fa-check-circle"></i> حسابرسی</li>
+                <li><i class="fa-solid fa-check-circle"></i> تحلیل مالی</li>
+                <li><i class="fa-solid fa-check-circle"></i> بهداشت مالی</li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> استانداردهای
+                  بین‌المللی
+                </li>
+              </ul>
+              <a href="list-page.html?cat=advanced" class="path-link">
+                شروع کنید <i class="fa-solid fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -848,7 +673,7 @@
       </section>
 
       <!-- 6. LATEST ARTICLES -->
-      <section class="articles-section">
+      <section class="articles-section" id="articles">
         <div class="section-header">
           <h2 class="section-title">
             <i class="fa-solid fa-newspaper"></i>

@@ -11,7 +11,7 @@
 
   let index = 0;
   let timer;
-  const visibleCount = () => window.innerWidth <= 620 ? 1 : window.innerWidth <= 920 ? 2 : 3;
+  const visibleCount = () => window.innerWidth <= 620 ? 1 : window.innerWidth <= 1000 ? 2 : window.innerWidth <= 1120 ? 3 : 4;
   const lastIndex = () => Math.max(0, cards.length - visibleCount());
 
   function paint() {

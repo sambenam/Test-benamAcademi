@@ -384,7 +384,7 @@ const mainItems = {
         id: "popularCourses-1",
         title: "آموزش مغایرت گیری در اکسل به زبان ساده",
         excerpt: "آموزش کامل مغایرت گیری بانکی در اکسل.",
-        image: "../images/ravin.png",
+        image: "../images/course-finance.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -399,7 +399,7 @@ const mainItems = {
         id: "popularCourses-2",
         title: "آموزش نصب نرم افزار پارسیان",
         excerpt: "آموزش گام به گام نصب نرم افزار پارسیان.",
-        image: "../images/ravin.png",
+        image: "../images/course-accounting.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -414,7 +414,7 @@ const mainItems = {
         id: "popularCourses-3",
         title: "دانلود اکسل محاسبه حقوق و دستمزد",
         excerpt: "فایل اکسل محاسبه حقوق و دستمزد.",
-        image: "../images/ravin.png",
+        image: "../images/course-excel.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -429,7 +429,7 @@ const mainItems = {
         id: "popularCourses-4",
         title: "کتاب هزینه های قابل قبول مالیاتی",
         excerpt: "معرفی کتاب هزینه های قابل قبول مالیاتی.",
-        image: "../images/ravin.png",
+        image: "../images/course-python.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -510,7 +510,7 @@ const mainItems = {
         id: "newCourses-1",
         title: "آموزش مغایرت گیری در اکسل به زبان ساده",
         excerpt: "آموزش کامل مغایرت گیری بانکی در اکسل.",
-        image: "../images/ravin.png",
+        image: "../images/course-finance.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -525,7 +525,7 @@ const mainItems = {
         id: "newCourses-2",
         title: "آموزش نصب نرم افزار پارسیان",
         excerpt: "آموزش گام به گام نصب نرم افزار پارسیان.",
-        image: "../images/ravin.png",
+        image: "../images/course-accounting.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -540,7 +540,7 @@ const mainItems = {
         id: "newCourses-3",
         title: "دانلود اکسل محاسبه حقوق و دستمزد",
         excerpt: "فایل اکسل محاسبه حقوق و دستمزد.",
-        image: "../images/ravin.png",
+        image: "../images/course-excel.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
@@ -555,7 +555,7 @@ const mainItems = {
         id: "newCourses-4",
         title: "کتاب هزینه های قابل قبول مالیاتی",
         excerpt: "معرفی کتاب هزینه های قابل قبول مالیاتی.",
-        image: "../images/ravin.png",
+        image: "../images/course-python.jpg",
         content: {
           blocks: [
             { type: "heading", level: 1, text: "" },
