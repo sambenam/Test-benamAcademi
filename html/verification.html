@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f7ff">
+    <meta name="color-scheme" content="light">
+
+    <!-- در صورت استفاده بک‌اند از CSRF، مقدار content را در سرور جای‌گذاری کنید. -->
+    <meta name="csrf-token" content="">
+
+    <title>تأیید حساب کاربری | بنام آکادمی</title>
+    <link rel="stylesheet" href="../styles/pages/verification.css">
+</head>
+
+<body data-verify-endpoint="/api/auth/verify-code" data-resend-endpoint="/api/auth/resend-code"
+    data-success-url="index.html" data-login-url="sign-up.html" data-resend-delay="60" data-request-timeout="15000">
+    <main class="verification-page">
+        <section class="verification-card" aria-labelledby="pageTitle" aria-describedby="verificationDescription">
+
+            <div class="mail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                    <path
+                        d="M4.75 6.75h14.5a1.5 1.5 0 0 1 1.5 1.5v9.5a1.5 1.5 0 0 1-1.5 1.5H4.75a1.5 1.5 0 0 1-1.5-1.5v-9.5a1.5 1.5 0 0 1 1.5-1.5Z" />
+                    <path d="m4 8 7 5.05a1.7 1.7 0 0 0 2 0L20 8" />
+                </svg>
+            </div>
+
+            <h1 id="pageTitle">تأیید حساب کاربری</h1>
+            <p class="description" id="verificationDescription">
+                کد تأیید ۶ رقمی ارسال‌شده به ایمیل زیر را وارد کنید.
+            </p>
+            <p class="user-email" id="userEmail" aria-live="polite">ایمیل ثبت‌شده شما</p>
+
+            <form id="verificationForm" novalidate>
+                <fieldset class="code-fieldset">
+                    <legend class="sr-only">کد تأیید ۶ رقمی</legend>
+                    <div class="code-container" id="codeContainer">
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="one-time-code" enterkeyhint="done" aria-label="رقم اول کد تأیید" autofocus>
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="off" enterkeyhint="done" aria-label="رقم دوم کد تأیید">
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="off" enterkeyhint="done" aria-label="رقم سوم کد تأیید">
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="off" enterkeyhint="done" aria-label="رقم چهارم کد تأیید">
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="off" enterkeyhint="done" aria-label="رقم پنجم کد تأیید">
+                        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                            autocomplete="off" enterkeyhint="done" aria-label="رقم ششم کد تأیید">
+                    </div>
+                </fieldset>
+
+                <p class="form-message" id="formMessage" role="status" aria-live="assertive"></p>
+
+                <button class="verify-btn" id="verifyBtn" type="submit" disabled>
+                    <span class="button-label">تأیید و ادامه</span>
+                    <span class="button-spinner" aria-hidden="true"></span>
+                </button>
+            </form>
+
+            <div class="resend-section">
+                <span>کد را دریافت نکردید؟</span>
+                <button class="resend-btn" id="resendBtn" type="button" disabled>ارسال مجدد</button>
+                <span class="timer" id="timer" aria-live="off">01:00</span>
+            </div>
+
+            <a class="change-email" id="changeEmail" href="../html/sign-up.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+                <span>تغییر ایمیل</span>
+            </a>
+
+            <p class="security-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7 10V8a5 5 0 0 1 10 0v2" />
+                    <rect x="5" y="10" width="14" height="10" rx="2" />
+                </svg>
+                کد تأیید را در اختیار دیگران قرار ندهید.
+            </p>
+
+            <noscript>
+                <p class="noscript-message">برای تأیید حساب، جاوااسکریپت مرورگر را فعال کنید.</p>
+            </noscript>
+        </section>
+    </main>
+
+    <script src="../scripts/verification.js" defer></script>
+</body>
+
+</html>

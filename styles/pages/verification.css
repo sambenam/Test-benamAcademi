@@ -1,0 +1,525 @@
+/* فونت Vazirmatn در صورت وجود در پروژه استفاده می‌شود و در غیر این صورت فونت سیستم جایگزین است. */
+:root {
+    --primary: #5b5cf0;
+    --primary-dark: #4849d8;
+    --primary-soft: #eeeeff;
+    --text: #171a2b;
+    --muted: #6f7585;
+    --line: #e4e7ef;
+    --surface: rgba(255, 255, 255, 0.94);
+    --danger: #d92d4c;
+    --danger-soft: #fff1f3;
+    --success: #15803d;
+    --success-soft: #ecfdf3;
+    --shadow: 0 24px 70px rgba(34, 39, 73, 0.12), 0 6px 22px rgba(34, 39, 73, 0.05);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 280px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    color: var(--text);
+    background: #f5f7ff;
+    font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body::before,
+body::after {
+    position: fixed;
+    z-index: -1;
+    width: min(48vw, 560px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+body::before {
+    inset: -18% -10% auto auto;
+    background: radial-gradient(circle, rgba(91, 92, 240, 0.18), rgba(91, 92, 240, 0));
+}
+
+body::after {
+    inset: auto auto -24% -12%;
+    background: radial-gradient(circle, rgba(22, 181, 163, 0.13), rgba(22, 181, 163, 0));
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    border: 0;
+}
+
+.verification-page {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+    place-items: center;
+    padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+}
+
+.verification-card {
+    width: min(100%, 488px);
+    padding: 38px 40px 30px;
+    overflow: hidden;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    animation: card-in 0.45s ease-out both;
+}
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.mail-icon {
+    display: grid;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border: 1px solid rgba(91, 92, 240, 0.08);
+    border-radius: 24px;
+    place-items: center;
+    transform: rotate(-2deg);
+}
+
+.mail-icon svg {
+    width: 36px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: clamp(22px, 5vw, 27px);
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.45;
+}
+
+.description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.user-email {
+    min-height: 24px;
+    margin: 6px 0 26px;
+    overflow-wrap: anywhere;
+    color: var(--primary-dark);
+    direction: ltr;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+    unicode-bidi: plaintext;
+}
+
+.code-fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.code-container {
+    display: grid;
+    width: 100%;
+    max-width: 382px;
+    margin: 0 auto;
+    direction: ltr;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: clamp(5px, 1.7vw, 10px);
+}
+
+.code-input {
+    width: 100%;
+    min-width: 0;
+    height: clamp(50px, 13vw, 60px);
+    padding: 0;
+    color: var(--text);
+    caret-color: var(--primary);
+    background: #fafbff;
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    outline: none;
+    font-size: clamp(20px, 5.5vw, 24px);
+    font-weight: 800;
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.code-input:hover:not(:focus) {
+    border-color: #cfd3df;
+}
+
+.code-input:focus {
+    background: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(91, 92, 240, 0.11);
+    transform: translateY(-2px);
+}
+
+.code-container.has-error .code-input {
+    background: var(--danger-soft);
+    border-color: rgba(217, 45, 76, 0.45);
+}
+
+.code-container.has-success .code-input {
+    color: var(--success);
+    background: var(--success-soft);
+    border-color: rgba(21, 128, 61, 0.35);
+}
+
+.form-message {
+    display: grid;
+    min-height: 39px;
+    margin: 3px 0 4px;
+    align-items: center;
+    color: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.form-message.is-error,
+.form-message.is-success,
+.form-message.is-info {
+    color: var(--muted);
+}
+
+.form-message.is-error {
+    color: var(--danger);
+    animation: shake 0.35s ease;
+}
+
+.form-message.is-success {
+    color: var(--success);
+}
+
+.form-message.is-info {
+    color: var(--primary-dark);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+.verify-btn {
+    position: relative;
+    display: grid;
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 18px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(135deg, #6465f4, #5051df);
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 750;
+    box-shadow: 0 9px 22px rgba(91, 92, 240, 0.2);
+    place-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.verify-btn:not(:disabled):hover {
+    box-shadow: 0 12px 28px rgba(91, 92, 240, 0.3);
+    transform: translateY(-2px);
+}
+
+.verify-btn:not(:disabled):active {
+    box-shadow: 0 6px 16px rgba(91, 92, 240, 0.22);
+    transform: translateY(0);
+}
+
+.verify-btn:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.55;
+}
+
+.verify-btn.is-success {
+    background: var(--success);
+    box-shadow: 0 9px 22px rgba(21, 128, 61, 0.2);
+}
+
+.button-spinner {
+    position: absolute;
+    display: none;
+    width: 21px;
+    height: 21px;
+    border: 2.5px solid rgba(255, 255, 255, 0.42);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+.verify-btn.is-loading .button-label {
+    visibility: hidden;
+}
+
+.verify-btn.is-loading .button-spinner {
+    display: block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.resend-section {
+    display: flex;
+    min-height: 44px;
+    margin-top: 14px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px 7px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.resend-btn {
+    min-height: 40px;
+    padding: 6px 2px;
+    color: var(--primary-dark);
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.resend-btn:hover:not(:disabled) {
+    color: #3031bf;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.resend-btn:disabled {
+    color: #a6aab6;
+    cursor: not-allowed;
+}
+
+.timer {
+    min-width: 39px;
+    color: var(--primary-dark);
+    direction: ltr;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 750;
+}
+
+.timer[hidden] {
+    display: none;
+}
+
+.change-email {
+    display: inline-flex;
+    min-height: 44px;
+    margin-top: 7px;
+    padding: 8px 4px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.change-email:hover {
+    color: var(--primary-dark);
+}
+
+.change-email svg {
+    width: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.security-note {
+    display: flex;
+    margin: 16px 0 0;
+    padding-top: 17px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #8a8f9d;
+    border-top: 1px solid #eef0f5;
+    font-size: 11.5px;
+    line-height: 1.7;
+}
+
+.security-note svg {
+    width: 16px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.noscript-message {
+    margin: 12px 0 0;
+    padding: 10px;
+    color: var(--danger);
+    background: var(--danger-soft);
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(91, 92, 240, 0.35);
+    outline-offset: 3px;
+}
+
+.code-input:focus-visible {
+    outline: none;
+}
+
+@media (max-width: 520px) {
+    .verification-page {
+        align-items: center;
+        padding-inline: 12px;
+    }
+
+    .verification-card {
+        padding: 30px clamp(18px, 6vw, 28px) 24px;
+        border-radius: 23px;
+    }
+
+    .brand {
+        margin-bottom: 24px;
+    }
+
+    .mail-icon {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 19px;
+        border-radius: 21px;
+    }
+
+    .mail-icon svg {
+        width: 32px;
+    }
+
+    .user-email {
+        margin-bottom: 23px;
+    }
+}
+
+@media (max-width: 340px) {
+    .verification-page {
+        padding-inline: 8px;
+    }
+
+    .verification-card {
+        padding-inline: 14px;
+        border-radius: 20px;
+    }
+
+    .code-container {
+        gap: 4px;
+    }
+
+    .code-input {
+        height: 48px;
+        border-radius: 11px;
+        font-size: 19px;
+    }
+}
+
+@media (max-height: 680px) and (min-width: 380px) {
+    .verification-page {
+        align-items: start;
+    }
+
+    .verification-card {
+        margin-block: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

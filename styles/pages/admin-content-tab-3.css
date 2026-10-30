@@ -1,0 +1,693 @@
+.profile-review-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 20px
+}
+
+.profile-review-actions {
+    margin-top: 15px
+}
+
+@media(max-width:560px) {
+    .profile-review-row {
+        grid-template-columns: 1fr
+    }
+
+    .profile-review-modal {
+        width: 94% !important
+    }
+}
+
+/* Event-aware notification bell and independent dropdown event cues. */
+#notificationBtn {
+    transition: color .2s, transform .2s
+}
+
+#notificationBtn.bell-green {
+    color: #16a34a;
+    animation: bell-alert 1s infinite alternate
+}
+
+#notificationBtn.bell-blue {
+    color: #007aff;
+    animation: bell-alert 1s infinite alternate
+}
+
+#notificationBtn.bell-yellow {
+    color: #eab308;
+    animation: bell-alert 1s infinite alternate
+}
+
+#notificationBtn.bell-red {
+    color: #ef4444;
+    animation: bell-alert 1s infinite alternate
+}
+
+@keyframes bell-alert {
+    to {
+        transform: scale(1.25) rotate(10deg)
+    }
+}
+
+.notif-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start
+}
+
+.notif-event-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 5px
+}
+
+.notif-item--green .notif-event-dot {
+    background: #86868B
+}
+
+.notif-item--blue .notif-event-dot {
+    background: #86868B
+}
+
+.notif-item--yellow .notif-event-dot {
+    background: #86868B
+}
+
+.notif-item--red .notif-event-dot {
+    background: #FF3B30
+}
+
+.notif-event-dot--fresh {
+    animation: notif-dot 1s infinite alternate
+}
+
+@keyframes notif-dot {
+    to {
+        transform: scale(1.7);
+        opacity: .4
+    }
+}
+
+.notification-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, .15)
+}
+
+.notification-item>i {
+    font-size: 18px
+}
+
+.notification-item p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: var(--text-secondary)
+}
+
+.notification-item small {
+    font-size: 11px;
+    color: var(--text-secondary)
+}
+
+.notification-green>i {
+    color: #16a34a
+}
+
+.notification-blue>i {
+    color: #007aff
+}
+
+.notification-yellow>i {
+    color: #eab308
+}
+
+.notification-red>i {
+    color: #ef4444
+}
+
+/* Keep the dashboard fixed while the bell panel is being reviewed. */
+body.notification-panel-open {
+    overflow: hidden
+}
+
+.notification-dropdown {
+    max-height: calc(100vh - 90px);
+    overflow-y: auto
+}
+
+.notif-event-dot {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important
+}
+
+.notification-detail-modal {
+    max-width: 580px !important
+}
+
+.notification-detail-modal .modal-header span {
+    font-size: 11px;
+    color: var(--primary);
+    font-weight: 700
+}
+
+.notification-detail-modal h3 {
+    margin: 4px 0 0
+}
+
+.notification-detail-desc {
+    padding: 12px;
+    background: rgba(0, 122, 255, .04);
+    border-radius: 9px;
+    line-height: 1.9;
+    font-size: 13px
+}
+
+.notification-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 14px
+}
+
+.notification-detail-grid>div {
+    padding: 10px;
+    border: 1px solid rgba(148, 163, 184, .17);
+    border-radius: 9px;
+    background: rgba(15, 23, 42, .02)
+}
+
+.notification-detail-grid small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 10px;
+    margin-bottom: 5px
+}
+
+.notification-detail-grid strong {
+    font-size: 12px;
+    overflow-wrap: anywhere
+}
+
+.notification-detail-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 20px
+}
+
+@media(max-width:520px) {
+    .notification-detail-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.notification-extra-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 9px
+}
+
+.notification-extra-fields>div {
+    padding: 10px;
+    border: 1px dashed rgba(148, 163, 184, .3);
+    border-radius: 9px
+}
+
+.notification-extra-fields small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 10px;
+    margin-bottom: 5px
+}
+
+.notification-extra-fields strong {
+    font-size: 12px
+}
+
+@media(max-width:520px) {
+    .notification-extra-fields {
+        grid-template-columns: 1fr
+    }
+}
+
+.staff-audit-change {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 9px 0
+}
+
+.staff-audit-change>span {
+    flex: 1;
+    padding: 7px;
+    border-radius: 7px;
+    background: rgba(239, 68, 68, .06);
+    border: 1px solid rgba(239, 68, 68, .14)
+}
+
+.staff-audit-change>span.after {
+    background: rgba(52, 199, 89, .07);
+    border-color: rgba(52, 199, 89, .18)
+}
+
+.staff-audit-change small,
+.staff-audit-change b {
+    display: block;
+    font-size: 10px
+}
+
+.staff-audit-change b {
+    font-size: 11px;
+    margin-top: 3px;
+    overflow-wrap: anywhere
+}
+
+.staff-audit-change>i {
+    color: var(--primary);
+    font-size: 11px
+}
+
+.staff-audit-item .audit-changes strong {
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-size: 12px
+}
+
+.staff-audit-item .audit-changes span {
+    font-weight: bold;
+    color: var(--text-primary);
+    font-size: 12px;
+    margin-right: 6px
+}
+
+#notificationBtn.bell-black {
+    color: #111827;
+    animation: bell-alert 1s infinite alternate
+}
+
+.notif-item--black .notif-event-dot {
+    background: #86868B
+}
+
+.notification-black>i {
+    color: #111827
+}
+
+/* Every modal locks the underlying dashboard, while event types use their own detail layout. */
+body.modal-open {
+    overflow: hidden !important;
+    padding-right: var(--scrollbar-width, 0px)
+}
+
+.notification-detail-hero {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 13px
+}
+
+.notification-detail-hero>i {
+    font-size: 25px
+}
+
+.notification-detail-hero small,
+.notification-detail-hero strong {
+    display: block
+}
+
+.notification-detail-hero small {
+    font-size: 10px;
+    color: var(--text-secondary);
+    margin-bottom: 3px
+}
+
+.notification-detail-hero strong {
+    font-size: 15px
+}
+
+.notification-detail-hero.purchase {
+    background: rgba(22, 163, 74, .08)
+}
+
+.notification-detail-hero.purchase>i {
+    color: #16a34a
+}
+
+.notification-detail-hero.purchase>b {
+    margin-right: auto;
+    color: #16a34a
+}
+
+.notification-detail-hero.user {
+    background: rgba(0, 122, 255, .08)
+}
+
+.notification-detail-hero.user>i {
+    color: #007aff
+}
+
+.notification-detail-hero.staff {
+    background: rgba(234, 179, 8, .1)
+}
+
+.notification-detail-hero.staff>i {
+    color: #ca8a04
+}
+
+.notification-detail-hero.report {
+    background: rgba(239, 68, 68, .08)
+}
+
+.notification-detail-hero.report>i {
+    color: #ef4444
+}
+
+.notification-detail-hero.deletion {
+    background: rgba(17, 24, 39, .08)
+}
+
+.notification-detail-hero.deletion>i {
+    color: #111827
+}
+
+.notification-change-summary,
+.notification-report-text,
+.notification-deletion-warning {
+    padding: 11px;
+    border-radius: 9px;
+    margin-bottom: 12px
+}
+
+.notification-change-summary {
+    background: rgba(234, 179, 8, .07);
+    border-right: 3px solid #eab308
+}
+
+.notification-change-summary small,
+.notification-change-summary strong {
+    display: block
+}
+
+.notification-change-summary small,
+.notification-report-text small {
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+.notification-report-text {
+    background: rgba(239, 68, 68, .05);
+    border-right: 3px solid #ef4444
+}
+
+.notification-report-text p {
+    font-size: 12px;
+    line-height: 1.9;
+    margin: 5px 0 0
+}
+
+.notification-deletion-warning {
+    background: rgba(17, 24, 39, .06);
+    font-size: 12px
+}
+
+.notification-deletion-warning i {
+    margin-left: 6px
+}
+
+.notification-detail-hero.user>b {
+    margin-right: auto;
+    color: #007aff
+}
+
+.notification-account-status {
+    display: flex;
+    gap: 8px;
+    margin: -4px 0 12px
+}
+
+.notification-account-status span {
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    background: rgba(0, 122, 255, .08);
+    color: #007aff
+}
+
+.notification-detail-hero.report>b {
+    margin-right: auto;
+    padding: 5px 8px;
+    border-radius: 7px;
+    background: rgba(239, 68, 68, .12);
+    color: #ef4444;
+    font-size: 10px
+}
+
+.notification-evidence {
+    display: flex;
+    gap: 10px;
+    padding: 11px;
+    border: 1px dashed rgba(239, 68, 68, .35);
+    border-radius: 9px;
+    margin-top: 12px
+}
+
+.notification-evidence>i {
+    color: #ef4444;
+    padding-top: 3px
+}
+
+.notification-evidence small,
+.notification-evidence strong {
+    display: block
+}
+
+.notification-evidence small {
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+.notification-evidence strong {
+    font-size: 12px;
+    margin: 3px 0
+}
+
+.notification-evidence a {
+    font-size: 11px;
+    color: var(--primary)
+}
+
+/* Signup and staff-audit notifications intentionally use their own, non-generic detail compositions. */
+.signup-account-card,
+.profile-audit-card {
+    border: 1px solid rgba(0, 122, 255, .16);
+    border-radius: 13px;
+    overflow: hidden
+}
+
+.signup-account-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    background: rgba(0, 122, 255, .06)
+}
+
+.signup-account-avatar {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #007aff;
+    color: #fff
+}
+
+.signup-account-head div {
+    flex: 1
+}
+
+.signup-account-head small,
+.signup-account-head strong,
+.signup-account-head em {
+    display: block
+}
+
+.signup-account-head small {
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+.signup-account-head strong {
+    font-size: 15px;
+    margin: 3px 0
+}
+
+.signup-account-head em {
+    font-size: 10px;
+    color: var(--primary);
+    font-style: normal
+}
+
+.signup-account-status {
+    padding: 4px 8px;
+    border-radius: 99px;
+    background: rgba(22, 163, 74, .12);
+    color: #16a34a;
+    font-size: 10px
+}
+
+.signup-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 11px
+}
+
+.signup-contact>div {
+    padding: 9px;
+    background: rgba(15, 23, 42, .025);
+    border-radius: 8px
+}
+
+.signup-contact i {
+    color: var(--primary);
+    margin-left: 5px
+}
+
+.signup-contact small,
+.signup-contact b {
+    display: block;
+    font-size: 10px
+}
+
+.signup-contact b {
+    font-size: 11px;
+    margin-top: 4px;
+    overflow-wrap: anywhere
+}
+
+.signup-account-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 11px 12px
+}
+
+.signup-account-meta span {
+    font-size: 10px;
+    padding: 6px;
+    background: rgba(0, 122, 255, .05);
+    border-radius: 6px
+}
+
+.profile-audit-head {
+    display: flex;
+    gap: 12px;
+    padding: 14px;
+    background: rgba(234, 179, 8, .09)
+}
+
+.profile-audit-head>i {
+    font-size: 25px;
+    color: #ca8a04
+}
+
+.profile-audit-head small,
+.profile-audit-head strong,
+.profile-audit-head em {
+    display: block
+}
+
+.profile-audit-head small,
+.profile-audit-head em {
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+.profile-audit-head strong {
+    font-size: 15px;
+    margin: 3px 0
+}
+
+.profile-audit-head em {
+    font-style: normal
+}
+
+.profile-audit-fields {
+    padding: 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, .14)
+}
+
+.profile-audit-fields small,
+.profile-audit-fields strong {
+    display: block
+}
+
+.profile-audit-fields small {
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+.profile-audit-fields strong {
+    font-size: 12px;
+    margin-top: 4px
+}
+
+.profile-audit-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px
+}
+
+.profile-audit-row span {
+    flex: 1;
+    padding: 8px;
+    border-radius: 7px;
+    background: rgba(239, 68, 68, .06)
+}
+
+.profile-audit-row span.after {
+    background: rgba(22, 163, 74, .07)
+}
+
+.profile-audit-row small,
+.profile-audit-row b {
+    display: block;
+    font-size: 10px
+}
+
+.profile-audit-row b {
+    font-size: 11px;
+    margin-top: 3px
+}
+
+.profile-audit-row>i {
+    color: var(--primary);
+    font-size: 11px
+}
+
+.profile-audit-footer {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 11px;
+    background: rgba(15, 23, 42, .025);
+    font-size: 10px;
+    color: var(--text-secondary)
+}
+
+@media(max-width:520px) {
+    .signup-contact {
+        grid-template-columns: 1fr
+    }
+}
