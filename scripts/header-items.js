@@ -291,7 +291,7 @@ const headerItems = {
   },
 
   accountingFiles: {
-    title: "فایل های حسابداری",
+    title: "فایل‌ها",
     categories: {
       power_point: {
         title: "دانلود فایل پاور پوینت",
@@ -465,10 +465,10 @@ const headerItems = {
   },
 
   videos: {
-    title: "فیلم های آموزشی",
+    title: "دوره‌ها",
     categories: {
       videos: {
-        title: "فیلم های آموزشی",
+        title: "دوره‌ها",
         items: [
           {
             id: "video-1",
@@ -489,6 +489,37 @@ const headerItems = {
       },
     },
   },
+  regulations: {
+    title: "قوانین و مقررات",
+    categories: {
+      regulationsItems: {
+        title: "قوانین و مقررات",
+        items: [
+          {
+            id: "regulations-terms",
+            title: "شرایط استفاده از سایت",
+            excerpt: "این بخش برای درج شرایط استفاده از خدمات و محتوای سایت در نظر گرفته شده است.",
+            image: "../images/ravin.png",
+            content: { blocks: [{ type: "heading", level: 1, text: "شرایط استفاده از سایت" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن قوانین سایت تکمیل می‌شود." }], video: null, downloads: [] },
+          },
+          {
+            id: "regulations-privacy",
+            title: "حریم خصوصی کاربران",
+            excerpt: "اطلاعات مربوط به حریم خصوصی و نحوهٔ نگهداری داده‌های کاربران در این بخش قرار می‌گیرد.",
+            image: "../images/ravin.png",
+            content: { blocks: [{ type: "heading", level: 1, text: "حریم خصوصی کاربران" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن سیاست حریم خصوصی تکمیل می‌شود." }], video: null, downloads: [] },
+          },
+          {
+            id: "regulations-purchases",
+            title: "قوانین خرید و دریافت فایل‌ها",
+            excerpt: "شرایط خرید، دریافت و استفاده از محصولات آموزشی در این بخش توضیح داده می‌شود.",
+            image: "../images/ravin.png",
+            content: { blocks: [{ type: "heading", level: 1, text: "قوانین خرید و دریافت فایل‌ها" }, { type: "paragraph", text: "متن کامل این بخش پس از نهایی‌شدن شرایط فروش تکمیل می‌شود." }], video: null, downloads: [] },
+          },
+        ],
+      },
+    },
+  },
 };
 
 function flattenHeaderItems(items) {
@@ -498,16 +529,24 @@ function flattenHeaderItems(items) {
     const group = items[groupKey];
 
     if (group.subgroups) {
+      const groupItems = [];
       for (const subgroupKey in group.subgroups) {
         const subgroup = group.subgroups[subgroupKey];
         for (const catKey in subgroup.categories) {
-          flat[catKey] = subgroup.categories[catKey];
+          const category = subgroup.categories[catKey];
+          flat[catKey] = category;
+          groupItems.push(...(Array.isArray(category.items) ? category.items : []));
         }
       }
+      flat[groupKey] = { title: group.title, items: groupItems };
     } else if (group.categories) {
+      const groupItems = [];
       for (const catKey in group.categories) {
-        flat[catKey] = group.categories[catKey];
+        const category = group.categories[catKey];
+        flat[catKey] = category;
+        groupItems.push(...(Array.isArray(category.items) ? category.items : []));
       }
+      flat[groupKey] = { title: group.title, items: groupItems };
     }
   }
 

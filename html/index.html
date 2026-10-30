@@ -37,24 +37,45 @@
         <span>بنام آکادمی</span>
       </a>
       <nav class="home-primary-nav" aria-label="منوی اصلی">
-        <a class="is-active" href="../html/index.html" aria-current="page">خانه</a>
-        <a href="#courses">دوره‌ها</a>
-        <a href="#articles">مقالات</a>
-        <a href="#home-news">اخبار</a>
-        <a href="list-page.html?cat=power_point">فایل‌ها</a>
-        <a href="../html/about-us.html">درباره ما</a>
+        <div class="home-nav_item has-dropdown">
+          <a class="home-nav_link" href="list-page.html?cat=forStudents">برای دانشجویان</a>
+          <div class="home-nav_dropdown" aria-label="دسته‌بندی‌های دانشجویان">
+            <section>
+              <strong>کتاب و جزوه</strong>
+              <a href="list-page.html?cat=diploma">دروس تخصصی دیپلم</a>
+              <a href="list-page.html?cat=associate_degree">دروس تخصصی کاردانی</a>
+              <a href="list-page.html?cat=bachelor">دروس تخصصی کارشناسی</a>
+              <a href="list-page.html?cat=master">دروس تخصصی ارشد</a>
+              <a href="list-page.html?cat=phd">دروس تخصصی دکتری</a>
+            </section>
+            <section>
+              <strong>کنکوری‌ها</strong>
+              <a href="list-page.html?cat=konkur1">سوالات کنکور و پاسخ‌ها</a>
+              <a href="list-page.html?cat=konkur2">ضرایب و منابع کنکور</a>
+              <a href="list-page.html?cat=konkur3">روش مطالعه و تست</a>
+            </section>
+            <section>
+              <strong>پروژه‌های حسابداری</strong>
+              <a href="list-page.html?cat=Enterpreneurship_projects">پروژه‌های کارآفرینی</a>
+              <a href="list-page.html?cat=Enternship-projects">پروژه‌های کارآموزی</a>
+              <a href="list-page.html?cat=Financial-project">پروژه‌های مالی و حسابداری</a>
+            </section>
+          </div>
+        </div>
+        <a class="home-nav_link" href="list-page.html?cat=videos">دوره‌ها</a>
+        <a class="home-nav_link" href="list-page.html?cat=regulations">قوانین و مقررات</a>
+        <a class="home-nav_link" href="list-page.html?cat=exams">اخبار</a>
+        <a class="home-nav_link" href="list-page.html?cat=accountingFiles">فایل‌ها</a>
+        <a class="home-nav_link" href="../html/about-us.html">درباره ما</a>
       </nav>
       <div class="home-header_actions">
+        <div class="right-menu_items signin">
+          <a href="../html/sign-up.html" class="signup">ورود / عضویت</a>
+        </div>
         <label class="search-box home-search">
           <input type="search" aria-label="جستجو در سایت" placeholder="جستجو..." />
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </label>
-        <a class="home-account" href="../html/sign-up.html" aria-label="حساب کاربری" title="حساب کاربری">
-          <i class="fa-regular fa-user" aria-hidden="true"></i>
-        </a>
-        <div class="right-menu_items signin">
-          <a href="../html/sign-up.html" class="signup">ورود / عضویت</a>
-        </div>
       </div>
     </div>
   </header>
@@ -90,171 +111,14 @@
       </div>
 
       <ul class="mobile-menu_list">
-
+        <li class="mobile-dropdown"><a href="list-page.html?cat=forStudents" class="mobile-dropdown-btn"><span>برای دانشجویان</span></a></li>
+        <li class="mobile-dropdown"><a href="list-page.html?cat=videos" class="mobile-dropdown-btn"><span>دوره‌ها</span></a></li>
+        <li class="mobile-dropdown"><a href="list-page.html?cat=regulations" class="mobile-dropdown-btn"><span>قوانین و مقررات</span></a></li>
+        <li class="mobile-dropdown"><a href="list-page.html?cat=exams" class="mobile-dropdown-btn"><span>اخبار</span></a></li>
+        <li class="mobile-dropdown"><a href="list-page.html?cat=accountingFiles" class="mobile-dropdown-btn"><span>فایل‌ها</span></a></li>
+        <li class="mobile-dropdown"><a href="../html/about-us.html" class="mobile-dropdown-btn"><span>درباره ما</span></a></li>
         <li class="mobile-dropdown">
-          <a href="../html/index.html" class="mobile-dropdown-btn">
-            <span>خانه</span>
-          </a>
-        </li>
-
-        <li class="mobile-dropdown">
-          <button class="mobile-dropdown-btn">
-            <span>برای دانشجویان</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-
-          <ul class="mobile-dropdown-menu">
-            <li class="mobile-sub-dropdown">
-              <button class="mobile-sub-btn">
-                <span>کتاب و جزوه</span>
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-
-              <ul class="mobile-sub_menu">
-                <li>
-                  <a href="list-page.html?cat=diploma"> دروس تخصصی دیپلم </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=associate_degree">
-                    دروس تخصصی کاردانی
-                  </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=bachelor">
-                    دروس تخصصی کارشناسی
-                  </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=master"> دروس تخصصی ارشد </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=phd"> دروس تخصصی دکتری </a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- کنکوری ها -->
-
-            <li class="mobile-sub-dropdown">
-              <button class="mobile-sub-btn">
-                <span>کنکوری ها</span>
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-
-              <ul class="mobile-sub_menu">
-                <li>
-                  <a href="list-page.html?cat=konkur1">
-                    سوالات کنکوری ها + جواب ها
-                  </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=konkur2">
-                    ضرایب و منابع کنکور ها
-                  </a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=konkur3">
-                    روش های مطالعه و تست
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- پروژه ها -->
-
-            <li class="mobile-sub-dropdown">
-              <button class="mobile-sub-btn">
-                <span>پروژه های حسابداری</span>
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-
-              <ul class="mobile-sub_menu">
-                <li>
-                  <a href="list-page.html?cat=Enterpreneurship_projects">پروژه های کارآفرینی</a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=Enternship-projects">پروژه های کاراموزی</a>
-                </li>
-
-                <li>
-                  <a href="list-page.html?cat=Financial-project">پروژه های مالی و حسابداری</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="mobile-dropdown">
-          <button class="mobile-dropdown-btn">
-            <span>فایل های حسابداری</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-
-          <ul class="mobile-dropdown-menu">
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=power_point">
-                دانلود فایل پاور پوینت
-              </a>
-            </li>
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=Exel"> دانلود فایل های اکسل</a>
-            </li>
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=Word"> دانلود فایل های ورد</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="mobile-dropdown">
-          <button class="mobile-dropdown-btn">
-            <span>مقالات</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-
-          <ul class="mobile-dropdown-menu">
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=accounting_article">
-                مقالات حسابداری
-              </a>
-            </li>
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=software_training">
-                آموزش نرم افزار ها</a>
-            </li>
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=standards"> اصول و استانداردها</a>
-            </li>
-
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=accounting_circulars">
-                بخش نامه های حسابداری</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="mobile-dropdown">
-          <button class="mobile-dropdown-btn">
-            <span>فیلم های آموزشی</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-
-          <ul class="mobile-dropdown-menu">
-            <li class="mobile-sub-dropdown">
-              <a href="list-page.html?cat=videos"> فیلم های آموزشی </a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-dropdown">
-          <a href="../html/sign-up.html" class="mobile-dropdown-btn">
-            <span>ورود</span>
-          </a>
+          <a href="../html/sign-up.html" class="mobile-dropdown-btn"><span>ورود / عضویت</span></a>
         </li>
       </ul>
     </div>

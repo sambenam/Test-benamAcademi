@@ -898,7 +898,7 @@ const mainItems = {
   },
 
   exams: {
-    title: "آزمون ها",
+    title: "اخبار",
     items: [
       {
         id: "exams-1",
